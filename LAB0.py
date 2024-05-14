@@ -1,4 +1,4 @@
-# Latest commit ID (7 characters long): >>>
+# Latest commit ID (7 characters long): >>>c4a1883
 
 def sum_evens(num_list):
     """
@@ -14,17 +14,15 @@ def sum_evens(num_list):
         >>> output
         514.0
     """
-    # --- YOU CODE STARTS HERE
-    pass
-
+    total = 0.0  
+    for num in num_list:
+        if num % 2 == 0:  
+            total += num
+    return total
 
 def run_tests():
     import doctest
-    # Run start tests in all docstrings
-    #doctest.testmod(verbose=True, optionflags=doctest.NORMALIZE_WHITESPACE)
     
-    # Run start tests per function
-    #doctest.run_docstring_examples(sum_evens, globals(), name='LAB 0',verbose=True, optionflags=doctest.NORMALIZE_WHITESPACE)   
-
-if __name__ == "__main__":
-    run_tests()
+    doctest.testmod(verbose=True, optionflags=doctest.NORMALIZE_WHITESPACE)
+    
+    
